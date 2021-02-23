@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Матвійчук І.А., група ІТ-72, лабораторна робота №2, варіант №10
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, FrontEnd, lab2" />
+    <meta
+      name="description"
+      content="Лабораторна робота студентки ІТ-72 Матвійчук І.А. на тему 'Мова гіпертекстової розмітки сайту HTML-5. Таблиці. Каскадна таблиця стилів CSS-3'. Варіант №10. Завдання №1."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    /* вказала висоту, щоб було видно пусті клітинки */
+    td {
+      height: 30px;
+    }
+
+    /* вказала ширину, щоб було видно пусті клітинки */
+    .whole-cell {
+      width: 300px;
+    }
+
+    .half-cell {
+      width: 150px;
+    }
+
+    table tr:first-child {
+      background-color: rgb(220, 0, 0);
+      font-size: 30px;
+    }
+
+    table tr:nth-child(2) {
+      background-color: rgb(35, 0, 0);
+      font-size: 10px;
+      color: white; /* змінила колір тексту, щоб він не зливався з фоном */
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td class="half-cell">Матвійчук</td>
+        <td class="half-cell">Ірина</td>
+        <td rowspan="2" class="whole-cell">Анатоліївна</td>
+        <td class="whole-cell"></td>
+        <td rowspan="2" class="whole-cell"></td>
+      </tr>
+      <tr>
+        <!--
+          Вписала № лабораторної та варіант в одну клітинку, оскільки в
+          цьому рядку лише дві клітинки (інші дві об'єднані з 1-м рядком)
+        -->
+        <td colspan="2">група ІТ-72</td>
+        <td>лабораторна №2, варіант №10</td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+  </body>
+</html>
