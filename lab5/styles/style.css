@@ -1,0 +1,9 @@
+section {
+  margin-bottom: 5%;
+}
+
+#task2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
