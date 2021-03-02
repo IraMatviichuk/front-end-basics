@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Матвійчук І.А., група ІТ-72, лабораторна робота №6, варіант №10
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, FrontEnd, lab6" />
+    <meta
+      name="description"
+      content="Лабораторна робота студентки ІТ-72 Матвійчук І.А. на тему 'JavaScript. Події'. Варіант №10."
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="form-container">
+        <h2>Input form</h2>
+        <form id="form" method="POST" onmousedown="onMouseDown()">
+          <div class="input-field">
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              placeholder="Full name"
+            />
+            <span id="error-full-name"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" id="group" , name="group" placeholder="Group" />
+            <span id="error-group"></span>
+          </div>
+          <div class="input-field">
+            <input
+              type="number"
+              id="variant"
+              name="variant"
+              placeholder="Variant"
+            />
+            <span id="error-variant"></span>
+          </div>
+          <div class="input-field">
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              placeholder="Phone number"
+            />
+            <span id="error-phone"></span>
+          </div>
+          <div class="input-field">
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <span id="error-email"></span>
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+
+      <div id="table-container">
+        <div id="table"></div>
+        <input type="color" id="color-picker" />
+      </div>
+      <script src="scripts/formScript.js"></script>
+      <script src="scripts/tableScript.js"></script>
+    </main>
+  </body>
+</html>
