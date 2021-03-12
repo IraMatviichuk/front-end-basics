@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Матвійчук І.А., група ІТ-72, лабораторна робота №7, варіант №10
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, FrontEnd, lab7" />
+    <meta
+      name="description"
+      content="Лабораторна робота студентки ІТ-72 Матвійчук І.А. на тему 'JavaScript. Форми'. Варіант №10."
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="form-container">
+        <h2>Замовлення меблів</h2>
+        <form id="order-form" method="POST" onchange="validateForm()">
+          <div class="input-field">
+            <select id="product" name="product">
+              <option value="" disabled selected>Select product</option>
+            </select>
+            <span id="error-product"></span>
+          </div>
+          <div class="input-field">
+            <select id="material" name="material">
+              <option value="" disabled selected>Select material</option>
+            </select>
+            <span id="error-material"></span>
+          </div>
+          <div class="input-field">
+            <input
+              type="number"
+              id="items-number"
+              name="itemsNumber"
+              placeholder="Items number"
+              min="1"
+              max="10"
+            />
+            <span id="error-items-number"></span>
+          </div>
+          <input type="submit" onclick="onOrderSubmit(event)" />
+        </form>
+      </div>
+      <script src="scripts/fillOptions.js"></script>
+      <script src="scripts/orderFurnitureForm.js"></script>
+    </main>
+  </body>
+</html>
