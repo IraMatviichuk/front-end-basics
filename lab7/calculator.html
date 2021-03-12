@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Матвійчук І.А., група ІТ-72, лабораторна робота №7, варіант №10
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, FrontEnd, lab7" />
+    <meta
+      name="description"
+      content="Лабораторна робота студентки ІТ-72 Матвійчук І.А. на тему 'JavaScript. Форми'. Варіант №10."
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="calculator-container">
+        <h2>Тригонометричні функції</h2>
+        <h4>Кут повинен бути більше 0 та менше 90</h4>
+        <form id="calculator-form" method="POST" onchange="validateForm()">
+          <div class="input-field">
+            <label>Кут в градусах:</label>
+            <input
+              type="number"
+              id="angle"
+              name="angle"
+              placeholder="Angle"
+              min="0"
+              max="90"
+            />
+            <span id="error-angle"></span>
+          </div>
+          <div class="input-field">
+            <label>Функція</label>
+            <select id="function-type" name="functionType">
+              <option value="" disabled selected>Select function</option>
+              <option value="sin">sin</option>
+              <option value="cos">cos</option>
+              <option value="tan">tg</option>
+            </select>
+            <span id="error-function-type"></span>
+          </div>
+          <input type="submit" value="Обчислити" onclick="onCalculatorSubmit(event)" />
+          <span id="result-expression"></span>
+        </form>
+      </div>
+      <script src="scripts/calculatorForm.js"></script>
+    </main>
+  </body>
+</html>
